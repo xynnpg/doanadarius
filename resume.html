@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume — Darius-Eduard Doana</title>
+    <meta name="description"
+        content="Downloadable resume of Darius-Eduard Doana — 16-year-old developer, robotics champion, and software builder.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resume.css">
+</head>
+
+<body>
+    <!-- Animated background particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <a href="index.html" style="color: inherit; text-decoration: none;">
+                <span class="brand-bracket">{</span> xynnpg <span class="brand-bracket">}</span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html#about" class="nav-link">About</a>
+            <a href="index.html#projects" class="nav-link">Projects</a>
+            <a href="index.html#certifications" class="nav-link">Certifications</a>
+            <a href="index.html#contact" class="nav-link">Contact</a>
+            <a href="resume.html" class="nav-link nav-link-resume">Resume</a>
+            <button class="nav-link" id="langToggle"
+                style="background: none; border: none; font-size: 1.1rem; cursor: pointer; padding: 0 8px;">🇬🇧</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html#about" class="mobile-link">About</a>
+        <a href="index.html#projects" class="mobile-link">Projects</a>
+        <a href="index.html#certifications" class="mobile-link">Certifications</a>
+        <a href="index.html#contact" class="mobile-link">Contact</a>
+        <a href="resume.html" class="mobile-link mobile-link-resume">📄 Resume</a>
+    </div>
+
+    <!-- Resume Header -->
+    <section class="resume-hero">
+        <div class="container">
+            <div class="resume-hero-content">
+                <h1 class="resume-hero-title">My <span class="gradient-text">Resume</span></h1>
+                <p class="resume-hero-desc">A snapshot of my skills, experience, and achievements — all in one place.
+                </p>
+                <button class="btn btn-primary" id="printResume" onclick="window.print()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                    <span>Download / Print PDF</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Document -->
+    <section class="resume-section">
+        <div class="container">
+            <div class="resume-paper" id="resumePaper">
+                <!-- Header -->
+                <div class="resume-header">
+                    <div class="resume-name-block">
+                        <h1 class="resume-name">Darius-Eduard Doana</h1>
+                        <p class="resume-tagline">Full-Stack & Mobile Developer · Robotics National Champion</p>
+                    </div>
+                    <div class="resume-contact-info">
+                        <div class="resume-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14"
+                                height="14">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                            doanadarius543@gmail.com
+                        </div>
+                        <div class="resume-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14"
+                                height="14">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Arad, Romania
+                        </div>
+                        <div class="resume-contact-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                            github.com/xynnpg
+                        </div>
+                        <div class="resume-contact-item">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                            linkedin.com/in/darius-eduard-doana
+                        </div>
+                        <div class="resume-contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="14"
+                                height="14">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
+                            </svg>
+                            doanadarius.page
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-divider"></div>
+
+                <!-- Summary -->
+                <div class="resume-block">
+                    <h2 class="resume-block-title">About Me</h2>
+                    <p class="resume-text">
+                        Regular 16-year-old developer from Arad, Romania who likes building cool things with code.
+                        I've won national robotics competitions (AI category) and medaled in computer science olympiads,
+                        but mostly I just build apps using Flutter, Dart, Python, and C++. Always learning.
+                    </p>
+                </div>
+
+                <div class="resume-divider"></div>
+
+                <!-- Education -->
+                <div class="resume-block">
+                    <h2 class="resume-block-title">Education</h2>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">High School Student</h3>
+                                <p class="resume-entry-place">Arad, Romania</p>
+                            </div>
+                            <span class="resume-entry-date">2026 — Present</span>
+                        </div>
+                        <p class="resume-entry-desc">
+                            Studying computer science while competing in olympiads and building personal side projects.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="resume-divider"></div>
+
+                <!-- Skills -->
+                <div class="resume-block">
+                    <h2 class="resume-block-title">Technical Skills</h2>
+                    <div class="resume-skills-grid">
+                        <div class="resume-skill-group">
+                            <h4 class="resume-skill-category">Languages</h4>
+                            <div class="resume-tags">
+                                <span>Dart</span><span>C++</span><span>Python</span>
+                                <span>JavaScript</span><span>HTML</span><span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="resume-skill-group">
+                            <h4 class="resume-skill-category">Frameworks & Tools</h4>
+                            <div class="resume-tags">
+                                <span>Flutter</span><span>Docker</span><span>Git</span>
+                                <span>REST APIs</span><span>Node.js</span>
+                            </div>
+                        </div>
+                        <div class="resume-skill-group">
+                            <h4 class="resume-skill-category">Areas</h4>
+                            <div class="resume-tags">
+                                <span>Mobile Dev</span><span>Backend</span><span>Robotics & AI</span>
+                                <span>Competitive Programming</span>
+                            </div>
+                        </div>
+                        <div class="resume-skill-group">
+                            <h4 class="resume-skill-category">Languages Spoken</h4>
+                            <div class="resume-tags">
+                                <span>Romanian — Native</span>
+                                <span>English — Fluent</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-divider"></div>
+
+                <!-- Projects -->
+                <div class="resume-block">
+                    <h2 class="resume-block-title">Projects</h2>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">ServerAppPontaj</h3>
+                                <p class="resume-entry-place">Dart · Backend · API</p>
+                            </div>
+                        </div>
+                        <p class="resume-entry-desc">Backend API for an attendance tracking system. Building robust
+                            server-side logic with Dart.</p>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">JustLearnIt</h3>
+                                <p class="resume-entry-place">HTML · CSS · JavaScript</p>
+                            </div>
+                        </div>
+                        <p class="resume-entry-desc">Educational platform designed to make learning interactive and
+                            accessible. 3 stars on GitHub.</p>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">SpotifyDownloader</h3>
+                                <p class="resume-entry-place">Python · CLI · API</p>
+                            </div>
+                        </div>
+                        <p class="resume-entry-desc">Free Spotify downloader tool for offline music access.</p>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">DiscordAI</h3>
+                                <p class="resume-entry-place">AI · OpenRouter · Discord</p>
+                            </div>
+                        </div>
+                        <p class="resume-entry-desc">AI-powered Discord bot using OpenRouter APIs for smart
+                            conversations.</p>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">CheapMaps</h3>
+                                <p class="resume-entry-place">Python · Maps · Geolocation</p>
+                            </div>
+                        </div>
+                        <p class="resume-entry-desc">Lightweight mapping solution making geolocation accessible.</p>
+                    </div>
+                </div>
+
+                <div class="resume-divider"></div>
+
+                <!-- Achievements -->
+                <div class="resume-block">
+                    <h2 class="resume-block-title">Achievements & Awards</h2>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">NextLab Robotics — AI Stage — 1st Place</h3>
+                                <p class="resume-entry-place">National Olympiad, Romania</p>
+                            </div>
+                            <span class="resume-entry-date">2025</span>
+                        </div>
+                        <p class="resume-entry-desc">Won 1st place nationally in the AI category at the NextLab
+                            Robotics Olympiad.</p>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
+                                <h3 class="resume-entry-title">TIC Olympiad — 3rd Place</h3>
+                                <p class="resume-entry-place">County Stage, Arad, Romania</p>
+                            </div>
+                            <span class="resume-entry-date">2025</span>
+                        </div>
+                        <p class="resume-entry-desc">Placed 3rd at county level in the TIC (Computer Science)
+                            Olympiad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-bracket">{</span> xynnpg <span class="brand-bracket">}</span>
+                </div>
+                <p class="footer-text">Designed & Built by Darius-Eduard Doana</p>
+                <p class="footer-copyright">© 2026 — All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
