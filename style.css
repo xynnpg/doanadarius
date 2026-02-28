@@ -3,6 +3,10 @@
    built at 3am, tweaked at 4am, regretted at 7am
    =========================================== */
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- reset & basics --- */
 *,
 *::before,
@@ -360,6 +364,24 @@ img {
 .cmt {
     color: #546e7a;
     font-style: italic;
+}
+
+/* blinking cursor in code block */
+.cursor-blink {
+    color: var(--accent);
+    animation: cursor-blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 /* robot doodle */
@@ -1131,4 +1153,105 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
     background: var(--accent-dim);
+}
+
+/* ============================================
+   PRINT STYLES
+   for people who want to print the portfolio
+   (why would you, but ok)
+   ============================================ */
+@media print {
+
+    #navbar,
+    .hamburger,
+    .scroll-top,
+    .coffee-section,
+    .btn-coffee,
+    .hero-btns,
+    .doodle-robot,
+    .project-links,
+    .footer-easter {
+        display: none !important;
+    }
+
+    body {
+        background: #fff !important;
+        color: #1a1a1a !important;
+        font-size: 11pt;
+    }
+
+    .section,
+    .section-alt {
+        background: #fff !important;
+        padding: 24px 0 !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    .section-title,
+    .tech-card h3,
+    .project-card h3,
+    .cert-card h3,
+    .hero h1 {
+        color: #1a1a1a !important;
+    }
+
+    p,
+    .hero-desc,
+    .section-sub,
+    .tl-content p,
+    .tech-card p,
+    .project-card p,
+    .cert-card p {
+        color: #333 !important;
+    }
+
+    a {
+        color: #333 !important;
+        text-decoration: underline;
+    }
+
+    .hero-code,
+    .worst-code-block {
+        border-color: #ccc !important;
+        background: #f8f8f8 !important;
+    }
+
+    .project-card,
+    .tech-card,
+    .cert-card,
+    .lang-card,
+    .contact-card,
+    .about-card {
+        border-color: #ddd !important;
+        background: #fff !important;
+        box-shadow: none !important;
+    }
+
+    .project-tags span,
+    .about-note {
+        border-color: #ccc !important;
+        color: #333 !important;
+        background: #f5f5f5 !important;
+    }
+
+    footer {
+        border-top-color: #ddd !important;
+    }
+
+    .footer-inner p,
+    .footer-logo,
+    .footer-copy {
+        color: #666 !important;
+    }
+
+    @page {
+        margin: 0.6in;
+    }
 }
