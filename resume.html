@@ -6,78 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume — Darius-Eduard Doana</title>
     <meta name="description"
-        content="Downloadable resume of Darius-Eduard Doana — 16-year-old developer, robotics champion, and software builder.">
+        content="Resume of Darius-Eduard Doana — 16-year-old developer, national robotics AI champion, and builder of cool stuff.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="resume.css">
 </head>
 
 <body>
-    <!-- Animated background particles -->
-    <canvas id="particles"></canvas>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-brand">
-            <a href="index.html" style="color: inherit; text-decoration: none;">
-                <span class="brand-bracket">{</span> xynnpg <span class="brand-bracket">}</span>
-            </a>
+    <!-- Navigation (same as main site) -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">~/darius</a>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#about">about</a>
+            <a href="index.html#journey">journey</a>
+            <a href="index.html#tech">tech</a>
+            <a href="index.html#projects">projects</a>
+            <a href="index.html#certs">diplomas</a>
+            <a href="index.html#contact">contact</a>
+            <a href="resume.html" class="nav-resume">resume ↗</a>
         </div>
-        <div class="nav-links">
-            <a href="index.html#about" class="nav-link">About</a>
-            <a href="index.html#projects" class="nav-link">Projects</a>
-            <a href="index.html#certifications" class="nav-link">Certifications</a>
-            <a href="index.html#contact" class="nav-link">Contact</a>
-            <a href="resume.html" class="nav-link nav-link-resume">Resume</a>
-            <button class="nav-link" id="langToggle"
-                style="background: none; border: none; font-size: 1.1rem; cursor: pointer; padding: 0 8px;">🇬🇧</button>
-        </div>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+        <button class="hamburger" id="hamburger" aria-label="menu">
             <span></span><span></span><span></span>
         </button>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html#about" class="mobile-link">About</a>
-        <a href="index.html#projects" class="mobile-link">Projects</a>
-        <a href="index.html#certifications" class="mobile-link">Certifications</a>
-        <a href="index.html#contact" class="mobile-link">Contact</a>
-        <a href="resume.html" class="mobile-link mobile-link-resume">📄 Resume</a>
-    </div>
-
     <!-- Resume Header -->
     <section class="resume-hero">
         <div class="container">
-            <div class="resume-hero-content">
-                <h1 class="resume-hero-title">My <span class="gradient-text">Resume</span></h1>
-                <p class="resume-hero-desc">A snapshot of my skills, experience, and achievements — all in one place.
-                </p>
-                <button class="btn btn-primary" id="printResume" onclick="window.print()">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
-                        <polyline points="7 10 12 15 17 10" />
-                        <line x1="12" y1="15" x2="12" y2="3" />
-                    </svg>
-                    <span>Download / Print PDF</span>
-                </button>
-            </div>
+            <a href="index.html" class="back-link">← back to portfolio</a>
+            <h1 class="resume-hero-title">my <span class="highlight">resume</span></h1>
+            <p class="resume-hero-desc">everything in one page — for when someone asks "so what do you do?"</p>
+            <button class="btn-main" id="printResume" onclick="window.print()">
+                download / print PDF ↓
+            </button>
         </div>
     </section>
 
-    <!-- Resume Document -->
+    <!-- Resume Paper -->
     <section class="resume-section">
         <div class="container">
-            <div class="resume-paper" id="resumePaper">
+            <div class="resume-paper">
+
                 <!-- Header -->
                 <div class="resume-header">
                     <div class="resume-name-block">
                         <h1 class="resume-name">Darius-Eduard Doana</h1>
-                        <p class="resume-tagline">Full-Stack & Mobile Developer · Robotics National Champion</p>
+                        <p class="resume-tagline">Developer & Maker · 16 years old</p>
                     </div>
                     <div class="resume-contact-info">
                         <div class="resume-contact-item">
@@ -129,9 +107,11 @@
                 <div class="resume-block">
                     <h2 class="resume-block-title">About Me</h2>
                     <p class="resume-text">
-                        Regular 16-year-old developer from Arad, Romania who likes building cool things with code.
-                        I've won national robotics competitions (AI category) and medaled in computer science olympiads,
-                        but mostly I just build apps using Flutter, Dart, Python, and C++. Always learning.
+                        Self-taught 16-year-old developer from Arad, Romania. I build cross-platform mobile apps
+                        with Flutter/Dart, write backend APIs, and compete in robotics and CS olympiads.
+                        Won 1st place nationally in the AI category at the NextLab Robotics Olympiad (2025)
+                        and earned a bronze medal at the county CS olympiad. Currently a high school student
+                        at Colegiul Național Vasile Goldiș, always learning new stuff.
                     </p>
                 </div>
 
@@ -144,12 +124,14 @@
                         <div class="resume-entry-header">
                             <div>
                                 <h3 class="resume-entry-title">High School Student</h3>
-                                <p class="resume-entry-place">Arad, Romania</p>
+                                <p class="resume-entry-place">Colegiul Național Vasile Goldiș · Arad, Romania</p>
                             </div>
-                            <span class="resume-entry-date">2026 — Present</span>
+                            <span class="resume-entry-date">2024 — Present</span>
                         </div>
                         <p class="resume-entry-desc">
-                            Studying computer science while competing in olympiads and building personal side projects.
+                            Studying computer science (C++) alongside general curriculum.
+                            Competing in county and national olympiads in CS and robotics.
+                            Completed Logiscool programming courses (2024).
                         </p>
                     </div>
                 </div>
@@ -171,7 +153,7 @@
                             <h4 class="resume-skill-category">Frameworks & Tools</h4>
                             <div class="resume-tags">
                                 <span>Flutter</span><span>Docker</span><span>Git</span>
-                                <span>REST APIs</span><span>Node.js</span>
+                                <span>REST APIs</span><span>Linux</span>
                             </div>
                         </div>
                         <div class="resume-skill-group">
@@ -199,12 +181,29 @@
                     <div class="resume-entry">
                         <div class="resume-entry-header">
                             <div>
+                                <h3 class="resume-entry-title">Erasmus+ Group Mobile App</h3>
+                                <p class="resume-entry-place">Flutter · Robotics · VR</p>
+                            </div>
+                            <span class="resume-entry-date">May 2025</span>
+                        </div>
+                        <p class="resume-entry-desc">
+                            Built a group mobile app with robotics and VR integration for an Erasmus+ project,
+                            collaborating with classmates Pop Răzvan and Kovacs Norbert under teacher Adrian Hânțiu.
+                            Presented at the Erasmus event.
+                        </p>
+                    </div>
+                    <div class="resume-entry">
+                        <div class="resume-entry-header">
+                            <div>
                                 <h3 class="resume-entry-title">ServerAppPontaj</h3>
                                 <p class="resume-entry-place">Dart · Backend · API</p>
                             </div>
+                            <span class="resume-entry-date">2025 — Present</span>
                         </div>
-                        <p class="resume-entry-desc">Backend API for an attendance tracking system. Building robust
-                            server-side logic with Dart.</p>
+                        <p class="resume-entry-desc">
+                            Building a backend API for an attendance tracking system using Dart.
+                            Designing REST endpoints, authentication, and database logic.
+                        </p>
                     </div>
                     <div class="resume-entry">
                         <div class="resume-entry-header">
@@ -213,8 +212,9 @@
                                 <p class="resume-entry-place">HTML · CSS · JavaScript</p>
                             </div>
                         </div>
-                        <p class="resume-entry-desc">Educational platform designed to make learning interactive and
-                            accessible. 3 stars on GitHub.</p>
+                        <p class="resume-entry-desc">
+                            Educational quiz platform making learning interactive. 3 stars on GitHub.
+                        </p>
                     </div>
                     <div class="resume-entry">
                         <div class="resume-entry-header">
@@ -223,26 +223,31 @@
                                 <p class="resume-entry-place">Python · CLI · API</p>
                             </div>
                         </div>
-                        <p class="resume-entry-desc">Free Spotify downloader tool for offline music access.</p>
+                        <p class="resume-entry-desc">
+                            Python CLI tool for downloading Spotify tracks for offline listening.
+                        </p>
                     </div>
                     <div class="resume-entry">
                         <div class="resume-entry-header">
                             <div>
                                 <h3 class="resume-entry-title">DiscordAI</h3>
-                                <p class="resume-entry-place">AI · OpenRouter · Discord</p>
+                                <p class="resume-entry-place">Python · AI · OpenRouter</p>
                             </div>
                         </div>
-                        <p class="resume-entry-desc">AI-powered Discord bot using OpenRouter APIs for smart
-                            conversations.</p>
+                        <p class="resume-entry-desc">
+                            AI-powered Discord bot using OpenRouter APIs for conversational responses.
+                        </p>
                     </div>
                     <div class="resume-entry">
                         <div class="resume-entry-header">
                             <div>
                                 <h3 class="resume-entry-title">CheapMaps</h3>
-                                <p class="resume-entry-place">Python · Maps · Geolocation</p>
+                                <p class="resume-entry-place">Python · Geolocation</p>
                             </div>
                         </div>
-                        <p class="resume-entry-desc">Lightweight mapping solution making geolocation accessible.</p>
+                        <p class="resume-entry-desc">
+                            Lightweight mapping tool for basic geolocation without expensive API costs.
+                        </p>
                     </div>
                 </div>
 
@@ -254,24 +259,28 @@
                     <div class="resume-entry">
                         <div class="resume-entry-header">
                             <div>
-                                <h3 class="resume-entry-title">NextLab Robotics — AI Stage — 1st Place</h3>
-                                <p class="resume-entry-place">National Olympiad, Romania</p>
+                                <h3 class="resume-entry-title">🥇 NextLab Robotics — AI Stage — 1st Place National</h3>
+                                <p class="resume-entry-place">National Robotics Olympiad, Romania</p>
                             </div>
                             <span class="resume-entry-date">2025</span>
                         </div>
-                        <p class="resume-entry-desc">Won 1st place nationally in the AI category at the NextLab
-                            Robotics Olympiad.</p>
+                        <p class="resume-entry-desc">
+                            Won 1st place nationally in the AI category at the NextLab Robotics Olympiad.
+                            <a href="Diploma/NextLab.pdf" target="_blank">[View Diploma]</a>
+                        </p>
                     </div>
                     <div class="resume-entry">
                         <div class="resume-entry-header">
                             <div>
-                                <h3 class="resume-entry-title">TIC Olympiad — 3rd Place</h3>
-                                <p class="resume-entry-place">County Stage, Arad, Romania</p>
+                                <h3 class="resume-entry-title">🥉 TIC Olympiad — County Stage — 3rd Place</h3>
+                                <p class="resume-entry-place">County CS Olympiad, Arad, Romania</p>
                             </div>
                             <span class="resume-entry-date">2025</span>
                         </div>
-                        <p class="resume-entry-desc">Placed 3rd at county level in the TIC (Computer Science)
-                            Olympiad.</p>
+                        <p class="resume-entry-desc">
+                            Placed 3rd at county level in the Computer Science (TIC) Olympiad.
+                            <a href="Diploma/TIC.pdf" target="_blank">[View Diploma]</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -279,24 +288,15 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="brand-bracket">{</span> xynnpg <span class="brand-bracket">}</span>
-                </div>
-                <p class="footer-text">Designed & Built by Darius-Eduard Doana</p>
-                <p class="footer-copyright">© 2026 — All rights reserved.</p>
+            <div class="footer-inner">
+                <span class="footer-logo">~/darius</span>
+                <p>built by darius-eduard doana, mostly at 3am</p>
+                <p class="footer-copy">© 2026 — if you steal my code at least give me credit pls</p>
             </div>
         </div>
     </footer>
-
-    <!-- Scroll to Top Button -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20">
-            <polyline points="18 15 12 9 6 15" />
-        </svg>
-    </button>
 
     <script src="script.js"></script>
 </body>
