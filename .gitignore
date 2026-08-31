@@ -70,3 +70,12 @@ Thumbs.db
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+
+
+#ai
+.agent/
+.agents/
+.codex/
+.gemini/
+.impeccable/
+.opencode/

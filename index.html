@@ -20,10 +20,10 @@
     <meta name="twitter:description"
         content="Software developer and national AI robotics champion from Romania. Building mobile apps, APIs, and robotics solutions.">
     <meta name="twitter:image" content="https://doanadarius.page/Pics/Me.png">
-    <meta name="theme-color" content="#c96442">
+    <meta name="theme-color" content="#0e0e10">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -38,6 +38,12 @@
         <div class="sidebar-header">
             <a href="#" class="sidebar-logo">DD</a>
             <span class="sidebar-title">Navigation</span>
+            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse navigation" aria-controls="sidebar" aria-expanded="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                    <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                    <path d="M9 4v16M14 9l-3 3 3 3"></path>
+                </svg>
+            </button>
         </div>
         
         <nav class="sidebar-nav">
@@ -140,7 +146,7 @@
         </nav>
 
         <div class="sidebar-footer">
-            <a href="https://github.com/xynnpg" target="_blank" class="github-link">
+            <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="github-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-1.334-.465-.31-.762-.78-.762-.78-.625-.426.047-.417.047-.417.693.049 1.055.711 1.055.711.617 1.054 1.619.75 2.014.571.063-.446.242-.75.44-.921-1.333-.151-2.737-.666-2.737-.666-.38-.151.015-.237.015-.237.907.063 1.388.931 1.388.931.805 1.379 2.115.979 2.63.75.02-.577.208-.979.446-1.204-1.765-.201-3.62-.883-3.62-.883-.38-.151.015-.237.015-.237.907.063 1.388.931 1.388.931.617 1.054 1.619.75 2.014.571.063-.446.242-.75.44-.921-1.333-.151-2.737-.666-2.737-.666-.38-.151.015-.237.015-.237.907.063 1.388.931 1.388.931.805 1.379 2.115.979 2.63.75.02-.577.208-.979.446-1.204-1.765-.201-3.62-.883-3.62-.883zm-6.334 16.544c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461zm1.297 1.156c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461zm1.256 1.569c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461zm1.338 1.156c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461z"/>
                 </svg>
@@ -150,7 +156,7 @@
     </aside>
 
     <!-- Mobile menu toggle -->
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="menu">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -159,21 +165,20 @@
     <!-- ======= HERO ======= -->
     <section class="hero" id="hero">
         <div class="hero-inner">
-            <p class="hero-tag">// Software Developer & Robotics Engineer</p>
+            <p class="hero-tag">// Software Developer &amp; National Robotics Champion</p>
             <h1>
-                Hello, I'm <span class="highlight">Darius-Eduard Doana</span>.<br>
-                Building software solutions<br>
-                <span class="hero-sub">& <em>award-winning</em> robotics systems.</span>
+                I'm <span class="highlight">Darius-Eduard Doana</span>.<br>
+                I build mobile apps,<br>
+                <span class="hero-sub">backend systems &amp; <em>award-winning</em> robotics.</span>
             </h1>
             <p class="hero-desc">
-                A 16-year-old developer from Arad, Romania 🇷🇴. National champion in AI robotics (2025),
-                bronze medalist in Computer Science olympiads, and passionate about creating 
-                impactful software. Currently developing mobile applications, backend APIs, 
-                and competitive programming solutions.
+                16-year-old developer from Arad, Romania. I took 1st place nationally in AI Robotics
+                (NextLab 2025), earned a bronze at the County CS Olympiad, and ship real software used
+                by students across 33 countries.
             </p>
             <div class="hero-btns">
-                <a href="#projects" class="btn-main">View Projects ↓</a>
-                <a href="https://github.com/xynnpg" target="_blank" class="btn-ghost">GitHub Profile →</a>
+                <a href="#projects" class="btn-main">See My Work ↓</a>
+                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-ghost">GitHub Profile →</a>
             </div>
 
             <!-- Technical overview -->
@@ -187,14 +192,14 @@
   <span class="kw">final</span> age = <span class="num">16</span>;
   <span class="kw">final</span> location = <span class="str">'Arad, Romania'</span>;
 
-  <span class="typ">List</span>&lt;<span class="typ">String</span>&gt; <span class="fn">coreSkills</span>() => [
+  <span class="typ">List</span>&lt;<span class="typ">String</span>&gt; <span class="fn">coreSkills</span>() =&gt; [
     <span class="str">'Flutter/Dart'</span>,
     <span class="str">'Python'</span>,
     <span class="str">'C++'</span>,
     <span class="str">'Backend APIs'</span>,
   ];
 
-  <span class="typ">List</span>&lt;<span class="typ">String</span>&gt; <span class="fn">achievements</span>() => [
+  <span class="typ">List</span>&lt;<span class="typ">String</span>&gt; <span class="fn">achievements</span>() =&gt; [
     <span class="str">'National Robotics Champion 2025'</span>,
     <span class="str">'CS Olympiad Bronze Medalist'</span>,
   ];
@@ -225,28 +230,27 @@
     <!-- ======= ABOUT ======= -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> About Me</h2>
+            <h2 class="section-title"><span class="hash">#</span> About</h2>
             <div class="about-grid">
                 <div class="about-text">
                     <p>
-                        I am a self-taught software developer based in Arad, Romania, with a strong 
-                        focus on mobile application development and backend systems. My journey into 
-                        programming began in 2024, and since then I have dedicated countless hours to 
-                        mastering modern technologies and building practical solutions.
+                        I focus on building performant mobile applications and scalable backend systems.
+                        My work balances technical rigor with real-world utility, currently powering
+                        student tools across 33 countries.
                     </p>
                     <p>
-                        Currently attending <strong>Colegiul Național Vasile Goldiș</strong>, where I 
-                        specialize in Computer Science with emphasis on C++ and algorithmic problem-solving. 
-                        Beyond academics, I actively develop Flutter applications, Python tools, and 
-                        containerized services using Docker.
+                        I study Computer Science at <strong>CN Vasile Goldiș</strong>. My training in
+                        algorithmic C++ complements my practical experience with Flutter, Python,
+                        and Docker, allowing me to approach software development from a systems
+                        perspective.
                     </p>
                     <p>
-                        In 2025, I achieved 1st place at the National Robotics Olympiad (NextLab) in the 
-                        AI category—a testament to my dedication to innovation and technical excellence. 
-                        I also earned a bronze medal at the county-level Computer Science Olympiad.
+                        Beyond traditional dev, I build autonomous systems. My 2025 national robotics
+                        win was built on custom computer vision and sensor fusion models.
                     </p>
                     <p class="about-note">
-                        Current focus: Advanced Flutter state management patterns and scalable backend architecture.
+                        Currently engineering robust architectures using BLoC / Riverpod and
+                        containerized RESTful services.
                     </p>
                 </div>
                 <div class="about-card">
@@ -260,7 +264,7 @@
                         <div class="detail"><span class="label">Education</span><span>CN Vasile Goldiș</span></div>
                         <div class="detail">
                             <span class="label">GitHub</span>
-                            <span><a href="https://github.com/xynnpg" target="_blank">@xynnpg</a></span>
+                            <span><a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">@xynnpg</a></span>
                         </div>
                     </div>
                 </div>
@@ -271,58 +275,25 @@
     <!-- ======= EXPERIENCE / TIMELINE ======= -->
     <section class="section section-alt" id="journey">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Professional Journey</h2>
-            <p class="section-sub">Key milestones in my development career</p>
+            <h2 class="section-title"><span class="hash">#</span> Timeline</h2>
+            <p class="section-sub">How I got here</p>
 
-            <div class="timeline">
-                <div class="tl-item">
-                    <div class="tl-dot now"></div>
-                    <div class="tl-content">
-                        <span class="tl-date">Present (2026)</span>
-                        <h3>Active Development & Technical Growth</h3>
-                        <p>
-                            Currently focused on advanced Flutter applications, Docker containerization,
-                            and backend API development. Continuously expanding expertise in software
-                            architecture and cloud deployment strategies.
-                        </p>
+            <div class="timeline-scrubber" data-timeline-scrubber>
+                <div class="timeline-rail-wrap">
+                    <div class="timeline-rail" role="listbox" aria-label="Career chapters" aria-orientation="vertical">
+                        <button class="timeline-tick is-current" type="button" role="option" aria-selected="true" aria-label="2026 — Present: Active Development & Technical Growth" data-index="0"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025: 1st Place — NextLab National Robotics Championship" data-index="1"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025: 3rd Place — County Computer Science Olympiad" data-index="2"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2024: First Lines of Code" data-index="3"><span></span></button>
                     </div>
+                    <span class="timeline-rail-label">Explore chapters <span>↑ ↓</span></span>
                 </div>
-                <div class="tl-item">
-                    <div class="tl-dot gold"></div>
-                    <div class="tl-content">
-                        <span class="tl-date">2025</span>
-                        <h3>🥇 1st Place — NextLab National Robotics Championship</h3>
-                        <p>
-                            Awarded first place nationally in the AI Robotics category at the NextLab 
-                            competition. Developed an autonomous robot system with sensor fusion and 
-                            computer vision capabilities, demonstrating excellence in embedded systems 
-                            and artificial intelligence integration.
-                        </p>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-dot bronze"></div>
-                    <div class="tl-content">
-                        <span class="tl-date">2025</span>
-                        <h3>🥉 Bronze Medal — County Computer Science Olympiad</h3>
-                        <p>
-                            Earned third place at the county-level Computer Science Olympiad (TIC), 
-                            showcasing strong algorithmic thinking and problem-solving skills in 
-                            competitive programming environments using C++.
-                        </p>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-dot"></div>
-                    <div class="tl-content">
-                        <span class="tl-date">2024</span>
-                        <h3>Programming Foundation & Early Development</h3>
-                        <p>
-                            Began self-directed learning in web development and programming fundamentals.
-                            Completed Logiscool programming courses and built initial projects in HTML, 
-                            CSS, and JavaScript, establishing a strong foundation for future growth.
-                        </p>
-                    </div>
+
+                <div class="timeline-preview" aria-live="polite">
+                    <span class="timeline-preview-date" data-timeline-date>2026 — Present</span>
+                    <h3 data-timeline-title>Active Development &amp; Technical Growth</h3>
+                    <p data-timeline-description>Building production Flutter apps, designing containerized backend services with Docker, and architecting REST APIs in Dart. Focused on clean architecture patterns and scalable deployment strategies.</p>
+                    <span class="timeline-preview-index" data-timeline-index>01 / 04</span>
                 </div>
             </div>
         </div>
@@ -331,262 +302,102 @@
     <!-- ======= TECH STACK ======= -->
     <section class="section" id="tech">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Technical Skills</h2>
-            <p class="section-sub">Core technologies and tools I work with</p>
+            <div class="centered-section-heading">
+                <h2 class="section-title"><span class="hash">#</span> Technical Skills</h2>
+                <p class="section-sub">Languages and tools I use in production</p>
+            </div>
 
             <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-flutter-96.png" alt="Flutter" width="36" height="36">
                     </div>
                     <h3>Flutter & Dart</h3>
-                    <p>Cross-platform mobile application development with focus on clean architecture,
-                        state management (Provider, Riverpod, BLoC), and performance optimization.</p>
+                    <p>Production mobile apps with clean architecture, BLoC / Riverpod, and performance-focused Flutter builds.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-c-96.png" alt="C++" width="36" height="36"></div>
                     <h3>C++</h3>
-                    <p>Advanced proficiency for competitive programming, algorithm implementation,
-                        and systems-level development. Strong understanding of memory management
-                        and data structures.</p>
+                    <p>Algorithms, data structures, and systems-level problem solving sharpened through olympiad training.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-python-96.png" alt="Python" width="36" height="36">
                     </div>
                     <h3>Python</h3>
-                    <p>Rapid prototyping, API development, automation scripts, Discord bots,
-                        and data processing. Experience with async programming and RESTful services.</p>
+                    <p>Automation, REST APIs, Discord bots, and AI tooling built with async Python.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-docker-96.png" alt="Docker" width="36" height="36">
                     </div>
-                    <h3>Docker & Containerization</h3>
-                    <p>Container orchestration, Docker Compose configurations, and deployment
-                        strategies for scalable applications and microservices architectures.</p>
+                    <h3>Docker</h3>
+                    <p>Containerized backend services, Docker Compose setups, and self-hosted deployments.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-html-100.png" alt="HTML/CSS/JS" width="36"
                             height="36"></div>
                     <h3>Web Technologies</h3>
-                    <p>Modern HTML5, CSS3, and JavaScript for responsive web development.
-                        Building interactive interfaces and progressive web applications.</p>
+                    <p>Responsive interfaces built with HTML5, CSS3, and JavaScript, including this portfolio.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-ai-100.png" alt="Robotics & AI" width="36"
                             height="36"></div>
-                    <h3>Robotics & AI Systems</h3>
-                    <p>Sensor integration, computer vision, autonomous navigation, and machine
-                        learning implementations for competitive robotics applications.</p>
+                    <h3>Robotics & AI</h3>
+                    <p>Sensor fusion, computer vision, and autonomous navigation applied at national competition level.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ======= PROJECTS ======= -->
+          <!-- ======= PROJECTS ======= -->
     <section class="section section-alt" id="projects">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Featured Projects</h2>
-            <p class="section-sub">A selection of my recent development work</p>
+            <h2 class="section-title"><span class="hash">#</span> Projects</h2>
+            <p class="section-sub">Browse with arrows or drag — click any image for full details</p>
 
-            <div class="projects-grid">
-                <article class="project-card featured">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://breakcount.tech" target="_blank" title="Live Site">🌐</a>
-                            <a href="https://github.com/xynnpg/BreakCount" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>BreakCount</h3>
-                    <p>Student app that counts down to your next school break — with a timetable, exam tracker,
-                        AI schedule parser from a photo, home screen widgets, and Google Drive backup.
-                        No ads, no account needed, 33+ countries supported. Built by a student, for students.</p>
-                    <span class="project-status">🔨 actively working on this</span>
-                    <div class="project-tags">
-                        <span>Flutter</span><span>Dart</span><span>Python</span>
-                    </div>
-                </article>
+            <!-- Two-column project showcase -->
+            <div class="proj-showcase">
 
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/ServerAppPontaj" target="_blank" title="GitHub">↗</a>
+                <!-- LEFT: Coverflow carousel -->
+                <div class="proj-carousel-col">
+                    <div class="cf-wrap" id="cfWrap" role="region" aria-label="Project carousel">
+                        <button class="cf-nav-btn cf-nav-prev" id="cfPrev" aria-label="Previous project">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+                        </button>
+                        <button class="cf-nav-btn cf-nav-next" id="cfNext" aria-label="Next project">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                        </button>
+                        <!-- 3D frame — clicking active card opens modal -->
+                        <div class="cf-frame" id="cfFrame" tabindex="0">
+                            <div class="cf-stage" id="cfStage"></div>
                         </div>
+                        <div class="cf-dots" id="cfDots"></div>
                     </div>
-                    <h3>ServerAppPontaj</h3>
-                    <p>Backend API for an attendance tracking system. This is my main project rn —
-                        writing the whole server-side logic in Dart. Its actually getting pretty complex now
-                        and I'm kinda proud of the architecture (even if the error handling is questionable lmao).</p>
-                    <div class="project-tags">
-                        <span>Dart</span><span>Backend</span><span>API</span>
-                    </div>
-                </article>
+                </div>
 
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/bluetooth-bridge" target="_blank" title="GitHub">↗</a>
+                <!-- RIGHT: Info panel — swaps content on each slide change -->
+                <div class="proj-info-col" aria-live="polite" id="projInfoCol">
+                    <div class="proj-info-inner" id="cfInfoInner">
+                        <div class="proj-info-tags" id="cfInfoTags"></div>
+                        <h3 class="proj-info-title" id="cfInfoTitle"></h3>
+                        <p class="proj-info-desc" id="cfInfoDesc"></p>
+                        <div class="proj-info-actions">
+                            <a class="proj-info-visit btn-main" id="cfInfoVisit" target="_blank" href="#">
+                                <span id="cfInfoVisitLabel">Visit Site</span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <button class="proj-info-more btn-ghost" id="cfInfoMore">
+                                More info
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                            </button>
                         </div>
+                        <p class="proj-info-hint">or click the image ↑</p>
                     </div>
-                    <h3>Bluetooth Bridge</h3>
-                    <p>Latest project — bridging Bluetooth connections with Python. Still early days but
-                        it's coming along. Sometimes Bluetooth devices just refuse to talk to each other
-                        and this tries to fix that mess.</p>
-                    <span class="project-status">🆕 fresh repo</span>
-                    <div class="project-tags">
-                        <span>Python</span><span>Bluetooth</span><span>Networking</span>
-                    </div>
-                </article>
+                </div>
 
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/DisStore" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>DisStore</h3>
-                    <p>Discord bot store project in Python. Experimenting with bot distribution and
-                        plugin-style architectures. The name's a bit cheesy I know but whatever it works.</p>
-                    <span class="project-status">🆕 just pushed</span>
-                    <div class="project-tags">
-                        <span>Python</span><span>Discord</span><span>Bots</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/Pontaj-API-Fork" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>Pontaj API Fork</h3>
-                    <p>Forked version of the Pontaj API I've been experimenting with. Sometimes you gotta
-                        dig into someone else's code to figure out how stuff works. Learning experience fr.</p>
-                    <div class="project-tags">
-                        <span>Python</span><span>API</span><span>Backend</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/JustLearnIt" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>JustLearnIt</h3>
-                    <p>Educational platform that I built to make studying less boring.
-                        It has like 3 stars on GitHub which is honestly generous because the UI is
-                        kinda ugly lol. But the core quiz logic works great I swear.</p>
-                    <span class="project-status">⭐ 3 stars (ty random strangers)</span>
-                    <div class="project-tags">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/SpotifyDownloader" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>SpotifyDownloader</h3>
-                    <p>Got mad that Spotify premium is expensive → made this Python CLI to
-                        grab tracks offline. Don't tell the lawyers lol. Breaks sometimes
-                        when they update their API and I have to panic-fix it at midnight.</p>
-                    <div class="project-tags">
-                        <span>Python</span><span>CLI</span><span>API</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/DiscordAI" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>DiscordAI</h3>
-                    <p>AI-powered Discord bot using OpenRouter APIs. Made it because my friends
-                        wanted a bot that could actually hold a conversation and not just do !ping.
-                        It works... most of the time. Rate limits are my nemesis.</p>
-                    <span class="project-status">⭐ 2 stars • 4 forks</span>
-                    <div class="project-tags">
-                        <span>Python</span><span>AI</span><span>OpenRouter</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/CheapMaps" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>CheapMaps</h3>
-                    <p>Lightweight mapping tool I hacked together in Python because Google Maps API
-                        costs money and I'm a broke high schooler. It's scrappy but it does the job
-                        for basic geolocation stuff.</p>
-                    <div class="project-tags">
-                        <span>Python</span><span>Maps</span><span>Geolocation</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.5">
-                            <path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <a href="https://github.com/xynnpg/SchoolYear" target="_blank" title="GitHub">↗</a>
-                        </div>
-                    </div>
-                    <h3>SchoolYear</h3>
-                    <p>School year organizer tool. Made it because I kept forgetting assignment deadlines
-                        and thought "wait I can code, why am I using a paper planner like its 2005".
-                        It's simple but hey, it helped me not fail geography.</p>
-                    <div class="project-tags">
-                        <span>JavaScript</span><span>Education</span>
-                    </div>
-                </article>
             </div>
 
             <div class="projects-more">
-                <a href="https://github.com/xynnpg" target="_blank" class="btn-outline">
-                    all repos on github →
+                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                    All repositories on GitHub →
                 </a>
             </div>
         </div>
@@ -595,79 +406,48 @@
     <!-- ======= DIPLOMAS / CERTS ======= -->
     <section class="section" id="certs">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Achievements & Awards</h2>
-            <p class="section-sub">Recognition for technical excellence and competitive success</p>
+            <h2 class="section-title"><span class="hash">#</span> Achievements</h2>
+            <p class="section-sub">Competition results and technical recognition</p>
 
             <div class="certs-grid">
                 <div class="cert-card gold-cert">
                     <div class="cert-medal">🥇</div>
                     <h3>NextLab National Robotics Championship</h3>
-                    <p class="cert-place">AI Category — 1st Place National</p>
-                    <p>Awarded first place at the national level in the AI robotics category.
-                        Developed an autonomous robot system with advanced sensor fusion and
-                        computer vision capabilities, demonstrating innovation in embedded systems.</p>
-                    <a href="Diploma/NextLab.pdf" target="_blank" class="cert-link">View Diploma →</a>
+                    <p class="cert-place">AI Category — 1st Place, National</p>
+                    <p>Designed and built an autonomous robot with sensor fusion and computer vision.
+                        Competed against teams from across Romania and took the national title
+                        in the AI Robotics category.</p>
+                    <a href="Diploma/NextLab.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">View Diploma →</a>
                 </div>
                 <div class="cert-card bronze-cert">
                     <div class="cert-medal">🥉</div>
-                    <h3>Computer Science Olympiad</h3>
+                    <h3>Computer Science Olympiad (TIC)</h3>
                     <p class="cert-place">County Stage — 3rd Place</p>
-                    <p>Earned third place at the county-level Computer Science (TIC) Olympiad,
-                        demonstrating strong algorithmic problem-solving skills and proficiency
-                        in C++ programming under competitive conditions.</p>
-                    <a href="Diploma/TIC.pdf" target="_blank" class="cert-link">View Diploma →</a>
+                    <p>Placed 3rd at the county-level CS Olympiad, solving algorithmic problems
+                        in C++ under timed competition conditions. Strong performance in data
+                        structures and graph algorithms.</p>
+                    <a href="Diploma/TIC.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">View Diploma →</a>
                 </div>
             </div>
-
-            <!-- TODO: upload robot pic from nationals when i find it on my phone -->
-        </div>
-    </section>
-
-    <!-- ======= WORST CODE EVER ======= -->
-    <section class="section section-alt" id="worst-code">
-        <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> worst code i ever wrote</h2>
-            <p class="section-sub">and why i keep it as a reminder to never do this again</p>
-
-            <div class="worst-code-block">
-                <div class="code-bar">
-                    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
-                    <span class="code-filename">shame.py (2024, my first week coding)</span>
-                </div>
-                <pre><code><span class="cmt"># i thought this was genius at the time</span>
-<span class="cmt"># spoiler: it was not</span>
-
-<span class="kw">def</span> <span class="fn">is_even</span>(n):
-    <span class="kw">if</span> n == <span class="num">0</span>: <span class="kw">return</span> <span class="num">True</span>
-    <span class="kw">if</span> n == <span class="num">1</span>: <span class="kw">return</span> <span class="num">False</span>
-    <span class="kw">if</span> n == <span class="num">2</span>: <span class="kw">return</span> <span class="num">True</span>
-    <span class="kw">if</span> n == <span class="num">3</span>: <span class="kw">return</span> <span class="num">False</span>
-    <span class="cmt"># ...you get the idea</span>
-    <span class="cmt"># it went up to 100</span>
-    <span class="cmt"># i didn't know about the % operator</span>
-    <span class="cmt"># we don't talk about this</span></code></pre>
-            </div>
-            <p class="worst-code-note">We all start somewhere. My somewhere was <em>very</em> bad.
-                But hey at least I didn't push it to GitHub... oh wait, nvm 💀</p>
         </div>
     </section>
 
     <!-- ======= LANGUAGES ======= -->
     <section class="section" id="languages">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> languages i speak</h2>
-            <p class="section-sub">(the human kind, not programming)</p>
+            <h2 class="section-title"><span class="hash">#</span> Languages</h2>
+            <p class="section-sub">Human languages — the programming ones are listed above</p>
 
             <div class="lang-grid">
                 <div class="lang-card">
                     <span class="lang-flag">🇷🇴</span>
                     <h3>Romanian</h3>
-                    <span class="lang-level">Native — da, sunt român</span>
+                    <span class="lang-level">Native</span>
                 </div>
                 <div class="lang-card">
                     <span class="lang-flag">🇬🇧</span>
                     <h3>English</h3>
-                    <span class="lang-level">Fluent — learned mostly from gaming and YouTube lol</span>
+                    <span class="lang-level">Fluent — professional working proficiency</span>
                 </div>
             </div>
         </div>
@@ -676,64 +456,90 @@
     <!-- ======= CONTACT ======= -->
     <section class="section section-alt" id="contact">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Get In Touch</h2>
-            <p class="section-sub">
-                Interested in collaboration, freelance opportunities, or have a project in mind? Feel free to reach out.
-            </p>
+            <div class="contact-heading">
+                <div>
+                    <h2 class="section-title"><span class="hash">#</span> Get In Touch</h2>
+                    <p class="section-sub">Open to collaboration, freelance work, and interesting conversations about software.</p>
+                </div>
+                <a href="mailto:doanadarius543@gmail.com" class="contact-primary">Start a conversation <span>↗</span></a>
+            </div>
 
             <div class="contact-grid">
                 <a href="mailto:doanadarius543@gmail.com" class="contact-card">
-                    <span class="contact-emoji">📧</span>
+                    <span class="contact-symbol">@</span>
                     <span class="contact-name">Email</span>
-                    <span class="contact-val">doanadarius543@gmail.com</span>
+                    <span class="contact-val">doanadarius543<wbr>@gmail.com</span>
                 </a>
-                <a href="https://github.com/xynnpg" target="_blank" class="contact-card">
-                    <span class="contact-emoji">🐙</span>
+                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <span class="contact-symbol">GH</span>
                     <span class="contact-name">GitHub</span>
                     <span class="contact-val">@xynnpg</span>
                 </a>
-                <a href="https://www.linkedin.com/in/darius-eduard-doana-8685b038b/" target="_blank"
+                <a href="https://www.linkedin.com/in/darius-eduard-doana-8685b038b/" target="_blank" rel="noopener noreferrer"
                     class="contact-card">
-                    <span class="contact-emoji">💼</span>
+                    <span class="contact-symbol">in</span>
                     <span class="contact-name">LinkedIn</span>
                     <span class="contact-val">Darius-Eduard Doana</span>
                 </a>
-                <a href="https://discord.com/users/xynnpg" target="_blank" class="contact-card">
-                    <span class="contact-emoji">💬</span>
+                <a href="https://discord.com/users/xynnpg" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <span class="contact-symbol">//</span>
                     <span class="contact-name">Discord</span>
                     <span class="contact-val">xynnpg</span>
                 </a>
             </div>
 
             <div class="coffee-section">
-                <p>☕ If any of my stuff helped you or you just wanna support a broke teenager
-                    who codes too much — no pressure, literally no pressure, but a coffee would make my day:</p>
-                <a href="https://buymeacoffee.com/xynnpg" target="_blank" class="btn-coffee">
-                    buy me a coffee ☕
+                <p>☕ If my work saved you time or you just want to support a developer who ships software between classes — a coffee goes a long way:</p>
+                <a href="https://buymeacoffee.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-coffee">
+                    Buy me a coffee ☕
                 </a>
-                <p class="coffee-note">No pressure fr, just happy if someone uses my crap lol</p>
+                <p class="coffee-note">No obligation — I'm just glad the work is useful.</p>
             </div>
         </div>
     </section>
 
     <!-- ======= FOOTER ======= -->
     <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-logo">Darius-Eduard Doana</span>
-                <p>Software Developer &mdash; Arad, Romania</p>
-                <p class="footer-copy">&copy; 2026 Darius-Eduard Doana. All rights reserved.</p>
-                <p class="footer-easter">
-                    <span class="easter-egg" title="ai nu ne deranjeaza">🇷🇴 Crafted with dedication</span>
-                </p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">DD</span>
+                <span>Software Developer &amp; Robotics Engineer</span>
             </div>
+            <div class="footer-links">
+                <a href="#hero">Back to top</a>
+                <a href="resume.html">Resume</a>
+                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+            <p class="footer-copy">© 2026 Darius-Eduard Doana · Arad, Romania</p>
         </div>
     </footer>
 
     <!-- scroll to top -->
     <button class="scroll-top" id="scrollTop" aria-label="back to top">↑</button>
 
+    <!-- ======= PROJECT DETAIL MODAL ======= -->
+    <div class="proj-modal-overlay" id="projModalOverlay" role="dialog" aria-modal="true" aria-labelledby="projModalTitle" hidden>
+        <div class="proj-modal" id="projModal">
+            <button class="proj-modal-close" id="projModalClose" type="button" aria-label="Close project details">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="proj-modal-header">
+                <h2 class="proj-modal-title" id="projModalTitle"></h2>
+                <div class="proj-modal-tags" id="projModalTags"></div>
+            </div>
+            <div class="proj-modal-body">
+                <p class="proj-modal-desc" id="projModalDesc"></p>
+                <div class="proj-modal-meta" id="projModalMeta"></div>
+            </div>
+            <div class="proj-modal-footer">
+                <a class="proj-modal-link btn-main" id="projModalLink" target="_blank" rel="noopener noreferrer" href="#">Open Repository ↗</a>
+                <a class="proj-modal-link-live btn-ghost" id="projModalLinkLive" target="_blank" rel="noopener noreferrer" href="#" hidden>Visit Live Site ↗</a>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 
 </html>
