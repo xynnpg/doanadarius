@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro" data-lang="ro">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darius-Eduard Doana | Developer & Robotics Engineer</title>
-    <meta name="description"
-        content="Darius-Eduard Doana is a 16-year-old software developer and national robotics champion from Arad, Romania, specializing in Flutter, Python, and backend systems.">
+    <title data-i18n="meta.title">Darius-Eduard Doana | Student Developer &amp; Robotics</title>
+    <meta name="description" data-i18n-attr="content:meta.description"
+        content="Darius-Eduard Doana is a 16-year-old student developer and national robotics champion from Arad, Romania, building mobile apps, backend services, and self-hosted infrastructure.">
 
     <!-- social sharing -->
-    <meta property="og:title" content="Darius-Eduard Doana | Developer Portfolio">
-    <meta property="og:description"
-        content="Software developer and national AI robotics champion. Specializing in Flutter/Dart, Python, C++, and backend development.">
+    <meta property="og:title" data-i18n-attr="content:meta.ogTitle" content="Darius-Eduard Doana | Student Developer Portfolio">
+    <meta property="og:description" data-i18n-attr="content:meta.ogDescription"
+        content="Student developer and national AI robotics champion. Building mobile apps, backend services, and self-hosted infrastructure with Flutter/Dart and Python.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://doanadarius.page/">
     <meta property="og:image" content="https://doanadarius.page/Pics/Me.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Darius-Eduard Doana | Developer Portfolio">
-    <meta name="twitter:description"
-        content="Software developer and national AI robotics champion from Romania. Building mobile apps, APIs, and robotics solutions.">
+    <meta name="twitter:title" data-i18n-attr="content:meta.twTitle" content="Darius-Eduard Doana | Student Developer Portfolio">
+    <meta name="twitter:description" data-i18n-attr="content:meta.twDescription"
+        content="Student developer and national AI robotics champion from Romania. Building mobile apps, backend services, and self-hosted infrastructure.">
     <meta name="twitter:image" content="https://doanadarius.page/Pics/Me.png">
     <meta name="theme-color" content="#0e0e10">
 
@@ -28,6 +28,19 @@
         href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        // Inline boot — applies the saved language before paint to avoid FOUC.
+        (function () {
+            try {
+                var saved = localStorage.getItem('dd_lang'); var qp = new URLSearchParams(location.search).get('lang'); var lang = (qp === 'en' || qp === 'ro') ? qp : ((saved === 'en' || saved === 'ro') ? saved : 'ro');
+                document.documentElement.setAttribute('lang', lang === 'ro' ? 'ro' : 'en');
+                document.documentElement.setAttribute('data-lang', lang);
+            } catch (e) {
+                document.documentElement.setAttribute('data-lang', 'ro');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -37,8 +50,8 @@
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="#" class="sidebar-logo">DD</a>
-            <span class="sidebar-title">Navigation</span>
-            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse navigation" aria-controls="sidebar" aria-expanded="true">
+            <span class="sidebar-title" data-i18n="sidebar.nav">Navigation</span>
+            <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Collapse navigation" data-i18n-attr="aria-label:sidebar.toggle.collapse" aria-controls="sidebar" aria-expanded="true">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
                     <rect x="3" y="4" width="18" height="16" rx="2"></rect>
                     <path d="M9 4v16M14 9l-3 3 3 3"></path>
@@ -49,7 +62,7 @@
         <nav class="sidebar-nav">
             <div class="tree-section">
                 <button class="tree-section-toggle active" data-section="main">
-                    <span class="section-title">Main</span>
+                    <span class="section-title" data-i18n="sidebar.section.main">Main</span>
                     <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -60,27 +73,27 @@
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                             <polyline points="9 22 9 12 15 12 15 22"></polyline>
                         </svg>
-                        <span>Home</span>
+                        <span data-i18n="sidebar.item.home">Home</span>
                     </a>
                     <a href="#about" class="tree-item" data-id="about">
                         <svg class="tree-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="3"></circle>
                             <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
                         </svg>
-                        <span>About</span>
+                        <span data-i18n="sidebar.item.about">About</span>
                     </a>
                     <a href="#journey" class="tree-item" data-id="experience">
                         <svg class="tree-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                         </svg>
-                        <span>Experience</span>
+                        <span data-i18n="sidebar.item.experience">Experience</span>
                     </a>
                 </div>
             </div>
 
             <div class="tree-section">
                 <button class="tree-section-toggle active" data-section="work">
-                    <span class="section-title">Work</span>
+                    <span class="section-title" data-i18n="sidebar.section.work">Work</span>
                     <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -92,21 +105,21 @@
                             <polyline points="2 17 12 22 22 17"></polyline>
                             <polyline points="2 12 12 17 22 12"></polyline>
                         </svg>
-                        <span>Skills</span>
+                        <span data-i18n="sidebar.item.skills">Skills</span>
                     </a>
                     <a href="#projects" class="tree-item" data-id="projects">
                         <svg class="tree-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
                         </svg>
-                        <span>Projects</span>
-                        <span class="tree-badge">NEW</span>
+                        <span data-i18n="sidebar.item.projects">Projects</span>
+                        <span class="tree-badge" data-i18n="sidebar.badge.new">NEW</span>
                     </a>
                 </div>
             </div>
 
             <div class="tree-section">
                 <button class="tree-section-toggle active" data-section="more">
-                    <span class="section-title">More</span>
+                    <span class="section-title" data-i18n="sidebar.section.more">More</span>
                     <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -117,14 +130,14 @@
                             <circle cx="12" cy="8" r="7"></circle>
                             <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                         </svg>
-                        <span>Achievements</span>
+                        <span data-i18n="sidebar.item.achievements">Achievements</span>
                     </a>
                     <a href="#contact" class="tree-item" data-id="contact">
                         <svg class="tree-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        <span>Contact</span>
+                        <span data-i18n="sidebar.item.contact">Contact</span>
                     </a>
                     <a href="resume.html" class="tree-item" data-id="resume">
                         <svg class="tree-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -134,7 +147,7 @@
                             <line x1="16" y1="17" x2="8" y2="17"></line>
                             <polyline points="10 9 9 9 8 9"></polyline>
                         </svg>
-                        <span>Resume</span>
+                        <span data-i18n="sidebar.item.resume">Resume</span>
                         <svg class="tree-external" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
@@ -146,6 +159,9 @@
         </nav>
 
         <div class="sidebar-footer">
+            <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language" aria-pressed="false">
+                <span class="lang-toggle-label" aria-hidden="true">Română</span>
+            </button>
             <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="github-link">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-1.334-.465-.31-.762-.78-.762-.78-.625-.426.047-.417.047-.417.693.049 1.055.711 1.055.711.617 1.054 1.619.75 2.014.571.063-.446.242-.75.44-.921-1.333-.151-2.737-.666-2.737-.666-.38-.151.015-.237.015-.237.907.063 1.388.931 1.388.931.805 1.379 2.115.979 2.63.75.02-.577.208-.979.446-1.204-1.765-.201-3.62-.883-3.62-.883-.38-.151.015-.237.015-.237.907.063 1.388.931 1.388.931.617 1.054 1.619.75 2.014.571.063-.446.242-.75.44-.921-1.333-.151-2.737-.666-2.737-.666-.38-.151.015-.237.015-.237.907.063 1.388.931 1.388.931.805 1.379 2.115.979 2.63.75.02-.577.208-.979.446-1.204-1.765-.201-3.62-.883-3.62-.883zm-6.334 16.544c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461zm1.297 1.156c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461zm1.256 1.569c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461zm1.338 1.156c-.063.151-.318.197-.569.092-.251-.092-.41-.31-.347-.461.063-.151.318-.197.569-.092.251.092.41.31.347.461z"/>
@@ -156,7 +172,7 @@
     </aside>
 
     <!-- Mobile menu toggle -->
-    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation" data-i18n-attr="aria-label:sidebar.mobile.open" aria-controls="sidebar" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -165,20 +181,20 @@
     <!-- ======= HERO ======= -->
     <section class="hero" id="hero">
         <div class="hero-inner">
-            <p class="hero-tag">// Software Developer &amp; National Robotics Champion</p>
+            <p class="hero-tag" data-i18n="hero.tag">// Student Developer &amp; National Robotics Champion</p>
             <h1>
-                I'm <span class="highlight">Darius-Eduard Doana</span>.<br>
-                I build mobile apps,<br>
-                <span class="hero-sub">backend systems &amp; <em>award-winning</em> robotics.</span>
+                <span data-i18n="hero.h1.line1">I'm</span> <span class="highlight" data-i18n="hero.name">Darius-Eduard Doana</span>.<br>
+                <span data-i18n="hero.h1.line2">I build mobile apps,</span><br>
+                <span class="hero-sub" data-i18n="hero.h1.line3">backend systems &amp; <em>award-winning</em> robotics.</span>
             </h1>
-            <p class="hero-desc">
-                16-year-old developer from Arad, Romania. I took 1st place nationally in AI Robotics
-                (NextLab 2025), earned a bronze at the County CS Olympiad, and ship real software used
-                by students across 33 countries.
+            <p class="hero-desc" data-i18n="hero.desc">
+                16-year-old student developer from Arad, Romania. I took 1st place nationally in AI Robotics
+                (NextLab 2025) with an NVIDIA Jetson Nano JetBot, placed at the County CS Olympiad, and ship real software used
+                by students in 33+ countries.
             </p>
             <div class="hero-btns">
-                <a href="#projects" class="btn-main">See My Work ↓</a>
-                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-ghost">GitHub Profile →</a>
+                <a href="#projects" class="btn-main" data-i18n="hero.btn.work">See My Work ↓</a>
+                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-ghost" data-i18n="hero.btn.github">GitHub Profile →</a>
             </div>
 
             <!-- Technical overview -->
@@ -189,7 +205,7 @@
                 </div>
                 <pre><code><span class="kw">class</span> <span class="cls">Developer</span> {
   <span class="kw">final</span> name = <span class="str">'Darius-Eduard Doana'</span>;
-  <span class="kw">final</span> age = <span class="num">16</span>;
+  <span class="kw">final</span> age = <span class="num" data-age-dart>16</span>;
   <span class="kw">final</span> location = <span class="str">'Arad, Romania'</span>;
 
   <span class="typ">List</span>&lt;<span class="typ">String</span>&gt; <span class="fn">coreSkills</span>() =&gt; [
@@ -200,7 +216,7 @@
   ];
 
   <span class="typ">List</span>&lt;<span class="typ">String</span>&gt; <span class="fn">achievements</span>() =&gt; [
-    <span class="str">'National Robotics Champion 2025'</span>,
+    <span class="str">'National Robotics Champion 2026'</span>,
     <span class="str">'CS Olympiad Bronze Medalist'</span>,
   ];
 }<span class="cursor-blink">▊</span></code></pre>
@@ -222,7 +238,7 @@
             <line x1="75" y1="95" x2="80" y2="115" stroke="currentColor" stroke-width="2" />
             <!-- lil sparks -->
             <circle cx="60" cy="22" r="1.5" fill="currentColor" class="spark" />
-            <text x="25" y="135" fill="currentColor" font-size="8" font-family="monospace" opacity="0.5">beep
+            <text x="25" y="135" fill="currentColor" font-size="8" font-family="monospace" opacity="0.5" data-i18n="hero.doodle.text">beep
                 boop</text>
         </svg>
     </section>
@@ -230,40 +246,39 @@
     <!-- ======= ABOUT ======= -->
     <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> About</h2>
+            <h2 class="section-title"><span class="hash">#</span> <span data-i18n="about.h2">About</span></h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about.p1">
                         I focus on building performant mobile applications and scalable backend systems.
                         My work balances technical rigor with real-world utility, currently powering
                         student tools across 33 countries.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         I study Computer Science at <strong>CN Vasile Goldiș</strong>. My training in
                         algorithmic C++ complements my practical experience with Flutter, Python,
                         and Docker, allowing me to approach software development from a systems
                         perspective.
                     </p>
-                    <p>
-                        Beyond traditional dev, I build autonomous systems. My 2025 national robotics
-                        win was built on custom computer vision and sensor fusion models.
-                    </p>
-                    <p class="about-note">
-                        Currently engineering robust architectures using BLoC / Riverpod and
-                        containerized RESTful services.
-                    </p>
+                        <p data-i18n="about.p3">
+                            Outside class, I build autonomous systems on real hardware — my 2025 national robotics
+                            win was built on the NVIDIA Jetson Nano JetBot AI Kit.
+                        </p>
+                        <p class="about-note" data-i18n="about.p4">
+                            I'm a student — most of my work is small, real, and built between classes. I also self-host a few services (Docker, Jellyfin, Pterodactyl) on a Linux box at home.
+                        </p>
                 </div>
                 <div class="about-card">
                     <div class="about-pic-wrapper">
                         <img src="Pics/Me.png" alt="Darius-Eduard Doana" class="about-pic">
                     </div>
                     <div class="about-details">
-                        <div class="detail"><span class="label">Full Name</span><span>Darius-Eduard Doana</span></div>
-                        <div class="detail"><span class="label">Age</span><span>16</span></div>
-                        <div class="detail"><span class="label">Location</span><span>Arad, Romania 🇷🇴</span></div>
-                        <div class="detail"><span class="label">Education</span><span>CN Vasile Goldiș</span></div>
+                        <div class="detail"><span class="label" data-i18n="about.fullName">Full Name</span><span>Darius-Eduard Doana</span></div>
+                        <div class="detail"><span class="label" data-i18n="about.age">Age</span><span data-age>16</span></div>
+                        <div class="detail"><span class="label" data-i18n="about.location">Location</span><span>Arad, Romania 🇷🇴</span></div>
+                        <div class="detail"><span class="label" data-i18n="about.education">Education</span><span>CN Vasile Goldiș</span></div>
                         <div class="detail">
-                            <span class="label">GitHub</span>
+                            <span class="label" data-i18n="about.github">GitHub</span>
                             <span><a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">@xynnpg</a></span>
                         </div>
                     </div>
@@ -275,25 +290,31 @@
     <!-- ======= EXPERIENCE / TIMELINE ======= -->
     <section class="section section-alt" id="journey">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Timeline</h2>
-            <p class="section-sub">How I got here</p>
+            <h2 class="section-title"><span class="hash">#</span> <span data-i18n="timeline.h2">Timeline</span></h2>
+            <p class="section-sub" data-i18n="timeline.sub">How I got here</p>
 
             <div class="timeline-scrubber" data-timeline-scrubber>
                 <div class="timeline-rail-wrap">
                     <div class="timeline-rail" role="listbox" aria-label="Career chapters" aria-orientation="vertical">
-                        <button class="timeline-tick is-current" type="button" role="option" aria-selected="true" aria-label="2026 — Present: Active Development & Technical Growth" data-index="0"><span></span></button>
-                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025: 1st Place — NextLab National Robotics Championship" data-index="1"><span></span></button>
-                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025: 3rd Place — County Computer Science Olympiad" data-index="2"><span></span></button>
-                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2024: First Lines of Code" data-index="3"><span></span></button>
+                        <button class="timeline-tick is-current" type="button" role="option" aria-selected="true" aria-label="2026 — Present" data-index="0"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025 — NextLab" data-index="1"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2026 — Olimpiada de Inovare" data-index="2"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025 — TIC No.1" data-index="3"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2026 — TIC No.2" data-index="4"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2026 — Acadnet" data-index="5"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2026 — Math + Caius Iacob" data-index="6"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2025 — Istorie + Voluntariat No.1" data-index="7"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2024 — First Lines of Code" data-index="8"><span></span></button>
+                        <button class="timeline-tick" type="button" role="option" aria-selected="false" aria-label="2026 — Voluntariat No.2 + PCEP" data-index="9"><span></span></button>
                     </div>
-                    <span class="timeline-rail-label">Explore chapters <span>↑ ↓</span></span>
+                    <span class="timeline-rail-label"><span data-i18n="timeline.explore">Explore chapters</span> <span data-i18n="timeline.arrowHint">↑ ↓</span></span>
                 </div>
 
                 <div class="timeline-preview" aria-live="polite">
                     <span class="timeline-preview-date" data-timeline-date>2026 — Present</span>
                     <h3 data-timeline-title>Active Development &amp; Technical Growth</h3>
                     <p data-timeline-description>Building production Flutter apps, designing containerized backend services with Docker, and architecting REST APIs in Dart. Focused on clean architecture patterns and scalable deployment strategies.</p>
-                    <span class="timeline-preview-index" data-timeline-index>01 / 04</span>
+                    <span class="timeline-preview-index" data-timeline-index>01 / 09</span>
                 </div>
             </div>
         </div>
@@ -303,45 +324,45 @@
     <section class="section" id="tech">
         <div class="container">
             <div class="centered-section-heading">
-                <h2 class="section-title"><span class="hash">#</span> Technical Skills</h2>
-                <p class="section-sub">Languages and tools I use in production</p>
+                <h2 class="section-title"><span class="hash">#</span> <span data-i18n="tech.h2">Technical Skills</span></h2>
+                <p class="section-sub" data-i18n="tech.sub">Languages and tools I use in production</p>
             </div>
 
             <div class="tech-grid">
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-flutter-96.png" alt="Flutter" width="36" height="36">
                     </div>
-                    <h3>Flutter & Dart</h3>
-                    <p>Production mobile apps with clean architecture, BLoC / Riverpod, and performance-focused Flutter builds.</p>
+                    <h3 data-i18n="tech.flutter.title">Flutter &amp; Dart</h3>
+                    <p data-i18n="tech.flutter.desc">Mobile apps I ship to real users — BreakCount alone is used in 33+ countries.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-c-96.png" alt="C++" width="36" height="36"></div>
-                    <h3>C++</h3>
-                    <p>Algorithms, data structures, and systems-level problem solving sharpened through olympiad training.</p>
+                    <h3 data-i18n="tech.cpp.title">C++</h3>
+                    <p data-i18n="tech.cpp.desc">Algorithms, data structures, and systems-level problem solving sharpened through olympiad training.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-python-96.png" alt="Python" width="36" height="36">
                     </div>
-                    <h3>Python</h3>
-                    <p>Automation, REST APIs, Discord bots, and AI tooling built with async Python.</p>
+                    <h3 data-i18n="tech.python.title">Python</h3>
+                    <p data-i18n="tech.python.desc">Automation, REST APIs, Discord bots, and AI tooling built with async Python.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-docker-96.png" alt="Docker" width="36" height="36">
                     </div>
-                    <h3>Docker</h3>
-                    <p>Containerized backend services, Docker Compose setups, and self-hosted deployments.</p>
+                    <h3 data-i18n="tech.docker.title">Docker</h3>
+                    <p data-i18n="tech.docker.desc">Containerized backend services, Docker Compose setups, and self-hosted deployments.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-html-100.png" alt="HTML/CSS/JS" width="36"
                             height="36"></div>
-                    <h3>Web Technologies</h3>
-                    <p>Responsive interfaces built with HTML5, CSS3, and JavaScript, including this portfolio.</p>
+                    <h3 data-i18n="tech.web.title">Web Technologies</h3>
+                    <p data-i18n="tech.web.desc">Responsive interfaces built with HTML5, CSS3, and JavaScript, including this portfolio.</p>
                 </div>
                 <div class="tech-card">
                     <div class="tech-icon"><img src="Icons/icons8-ai-100.png" alt="Robotics & AI" width="36"
                             height="36"></div>
-                    <h3>Robotics & AI</h3>
-                    <p>Sensor fusion, computer vision, and autonomous navigation applied at national competition level.</p>
+                    <h3 data-i18n="tech.robotics.title">Robotics &amp; AI</h3>
+                    <p data-i18n="tech.robotics.desc">Built on the NVIDIA Jetson Nano JetBot AI Kit. National title in 2025 with the AI category win.</p>
                 </div>
             </div>
         </div>
@@ -350,8 +371,8 @@
           <!-- ======= PROJECTS ======= -->
     <section class="section section-alt" id="projects">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Projects</h2>
-            <p class="section-sub">Browse with arrows or drag — click any image for full details</p>
+            <h2 class="section-title"><span class="hash">#</span> <span data-i18n="projects.h2">Projects</span></h2>
+            <p class="section-sub" data-i18n="projects.sub">Browse with arrows or drag — click any image for full details</p>
 
             <!-- Two-column project showcase -->
             <div class="proj-showcase">
@@ -380,23 +401,23 @@
                         <h3 class="proj-info-title" id="cfInfoTitle"></h3>
                         <p class="proj-info-desc" id="cfInfoDesc"></p>
                         <div class="proj-info-actions">
-                            <a class="proj-info-visit btn-main" id="cfInfoVisit" target="_blank" href="#">
+                            <a class="proj-info-visit btn-main" id="cfInfoVisit" target="_blank" rel="noopener noreferrer" href="#">
                                 <span id="cfInfoVisitLabel">Visit Site</span>
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                             </a>
                             <button class="proj-info-more btn-ghost" id="cfInfoMore">
-                                More info
+                                <span id="cfInfoMoreLabel">More info</span>
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                             </button>
                         </div>
-                        <p class="proj-info-hint">or click the image ↑</p>
+                        <p class="proj-info-hint" data-i18n="projects.hint">or click the image ↑</p>
                     </div>
                 </div>
 
             </div>
 
             <div class="projects-more">
-                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-outline">
+                <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-outline" data-i18n="projects.allGithub">
                     All repositories on GitHub →
                 </a>
             </div>
@@ -406,28 +427,31 @@
     <!-- ======= DIPLOMAS / CERTS ======= -->
     <section class="section" id="certs">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Achievements</h2>
-            <p class="section-sub">Competition results and technical recognition</p>
+            <h2 class="section-title"><span class="hash">#</span> <span data-i18n="certs.h2">Achievements</span></h2>
+            <p class="section-sub" data-i18n="certs.sub">Competition results and technical recognition</p>
 
             <div class="certs-grid">
                 <div class="cert-card gold-cert">
                     <div class="cert-medal">🥇</div>
-                    <h3>NextLab National Robotics Championship</h3>
-                    <p class="cert-place">AI Category — 1st Place, National</p>
-                    <p>Designed and built an autonomous robot with sensor fusion and computer vision.
-                        Competed against teams from across Romania and took the national title
-                        in the AI Robotics category.</p>
-                    <a href="Diploma/NextLab.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">View Diploma →</a>
+                    <h3 data-i18n="certs.nextlab.title">NextLab National Robotics Championship</h3>
+                    <p class="cert-place" data-i18n="certs.nextlab.place">AI Category — 1st Place, National</p>
+                    <p data-i18n="certs.nextlab.desc">Designed and built an autonomous JetBot on the NVIDIA Jetson Nano for the AI category. Competed against teams from across Romania and took the national title in 2025.</p>
+                    <a href="Diploma/NextLab - Prem.1.Nat.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" data-i18n="certs.nextlab.cta">View Diploma →</a>
                 </div>
                 <div class="cert-card bronze-cert">
                     <div class="cert-medal">🥉</div>
-                    <h3>Computer Science Olympiad (TIC)</h3>
-                    <p class="cert-place">County Stage — 3rd Place</p>
-                    <p>Placed 3rd at the county-level CS Olympiad, solving algorithmic problems
-                        in C++ under timed competition conditions. Strong performance in data
-                        structures and graph algorithms.</p>
-                    <a href="Diploma/TIC.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">View Diploma →</a>
+                    <h3 data-i18n="certs.pcep.title">PCEP-30-02 — Python Certified Entry-Level Programmer</h3>
+                    <p class="cert-place" data-i18n="certs.pcep.place">Python Institute — 2026</p>
+                    <p data-i18n="certs.pcep.desc">Passed the PCEP-30-02 certification from the Python Institute — a vendor-neutral credential that validates entry-level proficiency in Python fundamentals, syntax, control flow, data structures, and functions.</p>
+                    <a href="Diploma/certificate_KMBr.pkHr.zmHu.pdf" target="_blank" rel="noopener noreferrer" class="cert-link" data-i18n="certs.pcep.cta">View Certificate →</a>
                 </div>
+            </div>
+
+            <div class="cert-cta-wrap">
+                <a href="diplomas.html" class="cert-cta">
+                    <span data-i18n="certs.viewAll">View all diplomas →</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -435,19 +459,19 @@
     <!-- ======= LANGUAGES ======= -->
     <section class="section" id="languages">
         <div class="container">
-            <h2 class="section-title"><span class="hash">#</span> Languages</h2>
-            <p class="section-sub">Human languages — the programming ones are listed above</p>
+            <h2 class="section-title"><span class="hash">#</span> <span data-i18n="lang.h2">Languages</span></h2>
+            <p class="section-sub" data-i18n="lang.sub">Human languages — the programming ones are listed above</p>
 
             <div class="lang-grid">
                 <div class="lang-card">
                     <span class="lang-flag">🇷🇴</span>
-                    <h3>Romanian</h3>
-                    <span class="lang-level">Native</span>
+                    <h3 data-i18n="lang.ro.name">Romanian</h3>
+                    <span class="lang-level" data-i18n="lang.ro.level">Native</span>
                 </div>
                 <div class="lang-card">
                     <span class="lang-flag">🇬🇧</span>
-                    <h3>English</h3>
-                    <span class="lang-level">Fluent — professional working proficiency</span>
+                    <h3 data-i18n="lang.en.name">English</h3>
+                    <span class="lang-level" data-i18n="lang.en.level">Fluent — professional working proficiency</span>
                 </div>
             </div>
         </div>
@@ -458,42 +482,42 @@
         <div class="container">
             <div class="contact-heading">
                 <div>
-                    <h2 class="section-title"><span class="hash">#</span> Get In Touch</h2>
-                    <p class="section-sub">Open to collaboration, freelance work, and interesting conversations about software.</p>
+                    <h2 class="section-title"><span class="hash">#</span> <span data-i18n="contact.h2">Get In Touch</span></h2>
+                    <p class="section-sub" data-i18n="contact.sub">Open to collaboration, freelance work, and interesting conversations about software.</p>
                 </div>
-                <a href="mailto:doanadarius543@gmail.com" class="contact-primary">Start a conversation <span>↗</span></a>
+                <a href="mailto:doanadarius543@gmail.com" class="contact-primary" data-i18n="contact.primary">Start a conversation <span>↗</span></a>
             </div>
 
             <div class="contact-grid">
                 <a href="mailto:doanadarius543@gmail.com" class="contact-card">
                     <span class="contact-symbol">@</span>
-                    <span class="contact-name">Email</span>
+                    <span class="contact-name" data-i18n="contact.email.name">Email</span>
                     <span class="contact-val">doanadarius543<wbr>@gmail.com</span>
                 </a>
                 <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer" class="contact-card">
                     <span class="contact-symbol">GH</span>
-                    <span class="contact-name">GitHub</span>
+                    <span class="contact-name" data-i18n="contact.github.name">GitHub</span>
                     <span class="contact-val">@xynnpg</span>
                 </a>
                 <a href="https://www.linkedin.com/in/darius-eduard-doana-8685b038b/" target="_blank" rel="noopener noreferrer"
                     class="contact-card">
                     <span class="contact-symbol">in</span>
-                    <span class="contact-name">LinkedIn</span>
+                    <span class="contact-name" data-i18n="contact.linkedin.name">LinkedIn</span>
                     <span class="contact-val">Darius-Eduard Doana</span>
                 </a>
                 <a href="https://discord.com/users/xynnpg" target="_blank" rel="noopener noreferrer" class="contact-card">
                     <span class="contact-symbol">//</span>
-                    <span class="contact-name">Discord</span>
+                    <span class="contact-name" data-i18n="contact.discord.name">Discord</span>
                     <span class="contact-val">xynnpg</span>
                 </a>
             </div>
 
             <div class="coffee-section">
-                <p>☕ If my work saved you time or you just want to support a developer who ships software between classes — a coffee goes a long way:</p>
-                <a href="https://buymeacoffee.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-coffee">
+                <p data-i18n="contact.coffee.text">☕ If my work saved you time or you just want to support a developer who ships software between classes — a coffee goes a long way:</p>
+                <a href="https://buymeacoffee.com/xynnpg" target="_blank" rel="noopener noreferrer" class="btn-coffee" data-i18n="contact.coffee.btn">
                     Buy me a coffee ☕
                 </a>
-                <p class="coffee-note">No obligation — I'm just glad the work is useful.</p>
+                <p class="coffee-note" data-i18n="contact.coffee.note">No obligation — I'm just glad the work is useful.</p>
             </div>
         </div>
     </section>
@@ -503,24 +527,24 @@
         <div class="container footer-inner">
             <div class="footer-brand">
                 <span class="footer-logo">DD</span>
-                <span>Software Developer &amp; Robotics Engineer</span>
+                <span data-i18n="footer.role">Student · CS @ CNVG</span>
             </div>
             <div class="footer-links">
-                <a href="#hero">Back to top</a>
-                <a href="resume.html">Resume</a>
+                <a href="#hero" data-i18n="footer.backToTop">Back to top</a>
+                <a href="resume.html" data-i18n="footer.resume">Resume</a>
                 <a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
             </div>
-            <p class="footer-copy">© 2026 Darius-Eduard Doana · Arad, Romania</p>
+            <p class="footer-copy" data-i18n="footer.copy">© 2026 Darius-Eduard Doana · Arad, Romania</p>
         </div>
     </footer>
 
     <!-- scroll to top -->
-    <button class="scroll-top" id="scrollTop" aria-label="back to top">↑</button>
+    <button class="scroll-top" id="scrollTop" aria-label="back to top" data-i18n-attr="aria-label:scrollTop.aria">↑</button>
 
     <!-- ======= PROJECT DETAIL MODAL ======= -->
     <div class="proj-modal-overlay" id="projModalOverlay" role="dialog" aria-modal="true" aria-labelledby="projModalTitle" hidden>
         <div class="proj-modal" id="projModal">
-            <button class="proj-modal-close" id="projModalClose" type="button" aria-label="Close project details">
+            <button class="proj-modal-close" id="projModalClose" type="button" aria-label="Close project details" data-i18n-attr="aria-label:projects.modal.close">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
             <div class="proj-modal-header">
@@ -532,8 +556,8 @@
                 <div class="proj-modal-meta" id="projModalMeta"></div>
             </div>
             <div class="proj-modal-footer">
-                <a class="proj-modal-link btn-main" id="projModalLink" target="_blank" rel="noopener noreferrer" href="#">Open Repository ↗</a>
-                <a class="proj-modal-link-live btn-ghost" id="projModalLinkLive" target="_blank" rel="noopener noreferrer" href="#" hidden>Visit Live Site ↗</a>
+                <a class="proj-modal-link btn-main" id="projModalLink" target="_blank" rel="noopener noreferrer" href="#" data-i18n="projects.modal.openRepo">Open Repository ↗</a>
+                <a class="proj-modal-link-live btn-ghost" id="projModalLinkLive" target="_blank" rel="noopener noreferrer" href="#" hidden data-i18n="projects.modal.visitLive">Visit Live Site ↗</a>
             </div>
         </div>
     </div>

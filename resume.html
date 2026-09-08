@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro" data-lang="ro">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darius-Eduard Doana - Resume</title>
+    <title data-i18n="resume.title">Darius-Eduard Doana - Resume</title>
     <meta name="description" content="Resume of Darius-Eduard Doana, software developer and robotics engineer from Arad, Romania.">
     <meta name="theme-color" content="#0e0e10">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,17 +13,31 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="resume.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('dd_lang'); var qp = new URLSearchParams(location.search).get('lang'); var lang = (qp === 'en' || qp === 'ro') ? qp : ((saved === 'en' || saved === 'ro') ? saved : 'ro');
+                document.documentElement.setAttribute('lang', lang === 'ro' ? 'ro' : 'en');
+                document.documentElement.setAttribute('data-lang', lang);
+            } catch (e) {
+                document.documentElement.setAttribute('data-lang', 'ro');
+            }
+        })();
+    </script>
 </head>
 
 <body class="resume-page">
     <header class="resume-hero">
         <div class="container resume-hero-inner">
-            <a href="index.html" class="back-link">&lt;- Back to portfolio</a>
+            <a href="index.html" class="back-link" data-i18n="resume.back"><- Back to portfolio</a>
             <div class="resume-toolbar">
-                <p class="resume-kicker">RESUME / 2026</p>
+                <p class="resume-kicker" data-i18n="resume.kicker">RESUME / 2026</p>
                 <div class="resume-actions">
-                    <button class="btn-main" id="printResume" type="button">Print resume</button>
-                    <button class="btn-ghost" id="downloadResume" type="button">Download resume</button>
+                    <button class="btn-main" id="printResume" type="button" data-i18n="resume.print">Print resume</button>
+                    <button class="btn-ghost" id="downloadResume" type="button" data-i18n="resume.download">Download resume</button>
+                    <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language" aria-pressed="false">
+                        <span class="lang-toggle-label" aria-hidden="true">Română</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -35,14 +49,15 @@
                 <header class="resume-header">
                     <div class="resume-name-block">
                         <h1 class="resume-name">Darius-Eduard Doana</h1>
-                        <p class="resume-tagline">Software Developer / Robotics Engineer</p>
-                        <p class="resume-location">Arad, Romania</p>
+                        <p class="resume-tagline" data-i18n="resume.tagline">High School Student · Computer Science</p>
+                        <p class="resume-location" data-i18n="resume.location">Arad, Romania</p>
                     </div>
                     <address class="resume-contact-info">
                         <a class="resume-contact-item" href="mailto:doanadarius543@gmail.com">doanadarius543@gmail.com</a>
                         <a class="resume-contact-item" href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">github.com/xynnpg</a>
                         <a class="resume-contact-item" href="https://www.linkedin.com/in/darius-eduard-doana-8685b038b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/darius-eduard-doana</a>
                         <a class="resume-contact-item" href="https://doanadarius.page" target="_blank" rel="noopener noreferrer">doanadarius.page</a>
+                        <p class="resume-born"><span data-i18n="resume.born">Born 27.09.2009 · Age</span> <span data-age>16</span></p>
                     </address>
                 </header>
 
@@ -51,69 +66,74 @@
                 <div class="resume-layout">
                     <div class="resume-main-column">
                         <section class="resume-block">
-                            <h2 class="resume-block-title">Profile</h2>
-                            <p class="resume-text">Software developer focused on mobile apps, backend services, and practical tools. I work mainly with Flutter, Dart, Python, and C++, and I enjoy taking a project from a rough idea to something people can actually use.</p>
+                            <h2 class="resume-block-title" data-i18n="resume.profile.h2">Profile</h2>
+                            <p class="resume-text" data-i18n="resume.profile.text">Software developer focused on mobile apps, backend services, and practical tools. I work mainly with Flutter, Dart, Python, and C++, and I enjoy taking a project from a rough idea to something people can actually use.</p>
                         </section>
 
                         <section class="resume-block">
-                            <h2 class="resume-block-title">Selected Projects</h2>
+                            <h2 class="resume-block-title" data-i18n="resume.projects.h2">Selected Projects</h2>
                             <div class="resume-entry">
                                 <div class="resume-entry-header">
-                                    <div><h3 class="resume-entry-title">BreakCount</h3><p class="resume-entry-place">Flutter / Dart / Python / Firebase</p></div>
-                                    <span class="resume-entry-date">Active</span>
+                                    <div><h3 class="resume-entry-title" data-i18n="resume.breakcount.title">BreakCount</h3><p class="resume-entry-place" data-i18n="resume.breakcount.stack">Flutter / Dart / Python / Firebase</p></div>
+                                    <span class="resume-entry-date" data-i18n="resume.breakcount.active">Active</span>
                                 </div>
-                                <p class="resume-entry-desc">Student productivity app for school breaks, exams, timetables, and reminders. Used by students in 33+ countries; supports Android and iOS.</p>
+                                <p class="resume-entry-desc" data-i18n="resume.breakcount.desc">Student productivity app for school breaks, exams, timetables, and reminders. Used by students in 33+ countries; supports Android and iOS.</p>
                             </div>
                             <div class="resume-entry">
                                 <div class="resume-entry-header">
-                                    <div><h3 class="resume-entry-title">ServerAppPontaj</h3><p class="resume-entry-place">Dart / REST API / Docker</p></div>
+                                    <div><h3 class="resume-entry-title" data-i18n="resume.pontaj.title">ServerAppPontaj</h3><p class="resume-entry-place" data-i18n="resume.pontaj.stack">Dart / REST API / Docker</p></div>
                                 </div>
-                                <p class="resume-entry-desc">Attendance-tracking backend with authentication, shift logging, reporting, and containerized deployment.</p>
+                                <p class="resume-entry-desc" data-i18n="resume.pontaj.desc">Attendance-tracking backend with authentication, shift logging, reporting, and containerized deployment.</p>
                             </div>
                             <div class="resume-entry">
                                 <div class="resume-entry-header">
-                                    <div><h3 class="resume-entry-title">DiscordAI</h3><p class="resume-entry-place">Python / OpenRouter / Discord API</p></div>
+                                    <div><h3 class="resume-entry-title" data-i18n="resume.discordai.title">DiscordAI</h3><p class="resume-entry-place" data-i18n="resume.discordai.stack">Python / OpenRouter / Discord API</p></div>
                                 </div>
-                                <p class="resume-entry-desc">Conversational Discord bot with multi-turn context, role personas, and API-based responses.</p>
+                                <p class="resume-entry-desc" data-i18n="resume.discordai.desc">Conversational Discord bot with multi-turn context, role personas, and API-based responses.</p>
                             </div>
                             <div class="resume-entry">
                                 <div class="resume-entry-header">
-                                    <div><h3 class="resume-entry-title">JustLearnIt</h3><p class="resume-entry-place">HTML / CSS / JavaScript</p></div>
+                                    <div><h3 class="resume-entry-title" data-i18n="resume.justlearnit.title">JustLearnIt</h3><p class="resume-entry-place" data-i18n="resume.justlearnit.stack">HTML / CSS / JavaScript</p></div>
                                 </div>
-                                <p class="resume-entry-desc">Quiz and flashcard platform for creating study decks, running timed quizzes, and tracking progress.</p>
+                                <p class="resume-entry-desc" data-i18n="resume.justlearnit.desc">Quiz and flashcard platform for creating study decks, running timed quizzes, and tracking progress.</p>
                             </div>
                         </section>
 
                         <section class="resume-block">
-                            <h2 class="resume-block-title">Education</h2>
+                            <h2 class="resume-block-title" data-i18n="resume.education.h2">Education</h2>
                             <div class="resume-entry">
                                 <div class="resume-entry-header">
-                                    <div><h3 class="resume-entry-title">Colegiul National Vasile Goldis</h3><p class="resume-entry-place">Computer Science track / Arad, Romania</p></div>
-                                    <span class="resume-entry-date">2024 - Present</span>
+                                    <div><h3 class="resume-entry-title" data-i18n="resume.school.name">Colegiul National Vasile Goldis</h3><p class="resume-entry-place" data-i18n="resume.school.track">Computer Science track / Arad, Romania</p></div>
+                                    <span class="resume-entry-date" data-i18n="resume.school.dates">2024 - Present</span>
                                 </div>
-                                <p class="resume-entry-desc">Studying computer science with a focus on C++. Completed Logiscool programming courses in 2024.</p>
+                                <p class="resume-entry-desc" data-i18n="resume.school.desc">Studying computer science with a focus on C++. Completed the Logiscool programming course in 2026 and earned the PCEP-30-02 (Certified Entry-Level Python Programmer) from the Python Institute the same year.</p>
                             </div>
                         </section>
                     </div>
 
                     <aside class="resume-side-column">
                         <section class="resume-block">
-                            <h2 class="resume-block-title">Skills</h2>
-                            <div class="resume-skill-group"><h3 class="resume-skill-category">Languages</h3><p class="resume-skill-list">Dart, C++, Python, JavaScript, HTML, CSS</p></div>
-                            <div class="resume-skill-group"><h3 class="resume-skill-category">Tools</h3><p class="resume-skill-list">Flutter, Docker, Git, REST APIs, Linux, Firebase</p></div>
-                            <div class="resume-skill-group"><h3 class="resume-skill-category">Focus</h3><p class="resume-skill-list">Mobile development, backend systems, robotics, AI, competitive programming</p></div>
+                            <h2 class="resume-block-title" data-i18n="resume.skills.h2">Skills</h2>
+                            <div class="resume-skill-group"><h3 class="resume-skill-category" data-i18n="resume.skills.languagesCat">Languages</h3><p class="resume-skill-list" data-i18n="resume.skills.languagesList">Dart, C++, Python, JavaScript, HTML, CSS</p></div>
+                            <div class="resume-skill-group"><h3 class="resume-skill-category" data-i18n="resume.skills.toolsCat">Tools</h3><p class="resume-skill-list" data-i18n="resume.skills.toolsList">Flutter, Docker, Git, REST APIs, Linux, Firebase</p></div>
+                            <div class="resume-skill-group"><h3 class="resume-skill-category" data-i18n="resume.skills.focusCat">Focus</h3><p class="resume-skill-list" data-i18n="resume.skills.focusList">Mobile development, backend systems, robotics, AI, competitive programming</p></div>
                         </section>
 
                         <section class="resume-block">
-                            <h2 class="resume-block-title">Awards</h2>
-                            <div class="award-item"><strong>1st place, national</strong><span>NextLab Robotics - AI category, 2025</span><a href="Diploma/NextLab.pdf" target="_blank" rel="noopener noreferrer">View diploma</a></div>
-                            <div class="award-item"><strong>3rd place, county</strong><span>Computer Science Olympiad (TIC), 2025</span><a href="Diploma/TIC.pdf" target="_blank" rel="noopener noreferrer">View diploma</a></div>
+                            <h2 class="resume-block-title" data-i18n="resume.awards.h2">Awards</h2>
+                            <div class="award-item"><strong data-i18n="resume.award1.place">1st place, national</strong><span data-i18n="resume.award1.event">NextLab Robotics - AI category, 2025</span><a href="Diploma/NextLab - Prem.1.Nat.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.award1.cta">View diploma</a></div>
+                            <div class="award-item"><strong data-i18n="resume.award2.place">2nd place, national</strong><span data-i18n="resume.award2.event">Olimpiada de Inovare și Creație Digitală, 2026</span><a href="Diploma/Olimpiada de Inovare si Creație Digitala - Prem.2.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.award2.cta">View diploma</a></div>
+                            <div class="award-item"><strong data-i18n="resume.award3.place">3rd place, county</strong><span data-i18n="resume.award3.event">TIC Olympiad (No.1), 2025</span><a href="Diploma/TIC - No1 - Prem.3.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.award3.cta">View diploma</a></div>
+                            <div class="award-item"><strong data-i18n="resume.award4.place">Honorable mention</strong><span data-i18n="resume.award4.event">TIC Olympiad (No.2), 2026</span><a href="Diploma/TIC - No2 - Mentiune.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.award4.cta">View diploma</a></div>
+                            <div class="award-item"><strong data-i18n="resume.award5.place">Honorable mention</strong><span data-i18n="resume.award5.event">Acadnet, 2026</span><a href="Diploma/Acadnet - Mentiune.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.award5.cta">View diploma</a></div>
+                            <div class="award-item"><strong data-i18n="resume.award6.place">Certified</strong><span data-i18n="resume.award6.event">PCEP-30-02 — Python Institute, 2026</span><a href="Diploma/certificate_KMBr.pkHr.zmHu.pdf" target="_blank" rel="noopener noreferrer" data-i18n="resume.award6.cta">View certificate</a></div>
+                            <div class="award-item award-item-all"><a href="diplomas.html" data-i18n="certs.viewAll">View all diplomas →</a></div>
                         </section>
 
                         <section class="resume-block">
-                            <h2 class="resume-block-title">Languages</h2>
-                            <div class="language-line"><span>Romanian</span><strong>Native</strong></div>
-                            <div class="language-line"><span>English</span><strong>Fluent</strong></div>
+                            <h2 class="resume-block-title" data-i18n="resume.human.h2">Languages</h2>
+                            <div class="language-line"><span data-i18n="lang.ro.name">Romanian</span><strong data-i18n="lang.ro.level">Native</strong></div>
+                            <div class="language-line"><span data-i18n="lang.en.name">English</span><strong data-i18n="lang.en.level">Fluent</strong></div>
                         </section>
                     </aside>
                 </div>
@@ -123,9 +143,9 @@
 
     <footer>
         <div class="container footer-inner">
-            <div class="footer-brand"><span class="footer-logo">DD</span><span>Software Developer &amp; Robotics Engineer</span></div>
-            <div class="footer-links"><a href="index.html">Portfolio</a><a href="mailto:doanadarius543@gmail.com">Contact</a><a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">GitHub -&gt;</a></div>
-            <p class="footer-copy">2026 / Arad, Romania</p>
+            <div class="footer-brand"><span class="footer-logo">DD</span><span data-i18n="footer.role">Student · CS @ CNVG</span></div>
+            <div class="footer-links"><a href="index.html" data-i18n="footer.portfolio">Portfolio</a><a href="mailto:doanadarius543@gmail.com" data-i18n="footer.contact">Contact</a><a href="https://github.com/xynnpg" target="_blank" rel="noopener noreferrer">GitHub -&gt;</a></div>
+            <p class="footer-copy" data-i18n="footer.copyShort">2026 / Arad, Romania</p>
         </div>
     </footer>
 
